@@ -1,5 +1,6 @@
 {
   "name": "dyrname",
+	"version": "1.0.0",
 	"description": "Dynamically retrieve the dirname for the current file using stacktraces",
 	"license": "MIT",
   "type": "module",
@@ -17,5 +18,8 @@
     "@types/node": "^20.4.2",
     "lionconfig": "3.0.1",
     "typescript": "^5.1.6"
-  }
+  },
+	"publishConfig": {
+		"directory": "dist"
+	}
 }

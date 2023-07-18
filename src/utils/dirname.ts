@@ -1,6 +1,6 @@
 export function dirname() {
-  let path = /(?<path>[^\\\\(\\\\s]+):[0-9]+:[0-9]+/.exec(
-    new Error().stack!.split("\\\\n").slice(2, 3)[0]!
+  let path = /(?<path>[^\(\s]+):[0-9]+:[0-9]+/.exec(
+    new Error().stack!.split("\n").slice(2, 3)[0]!
   )!.groups!.path!;
 
   if (path.indexOf("file") >= 0) {
