@@ -1,29 +1,35 @@
 {
 	"name": "dyrname",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Dynamically retrieve the dirname for the current file using stacktraces",
 	"license": "MIT",
 	"type": "module",
-	"exports": "./src/index.ts",
+	"exports": {
+		"import": {
+			"types": "./.build/main.d.mts",
+			"default": "./.build/main.mjs"
+		},
+		"require": {
+			"types": "./.build/main.d.cts",
+			"default": "./.build/main.cjs"
+		}
+	},
 	"author": {
 		"name": "Leon Si",
 		"email": "leon@leondreamed.com",
 		"url": "https://leondreamed.com"
 	},
 	"scripts": {
-		"build": "ts-node ./scripts/build.ts",
-		"release": "lionp"
+		"build": "unbuild"
 	},
 	"devDependencies": {
+		"@tunnel/tsconfig": "0.0.0",
 		"@types/node": "^20.4.2",
-		"lionconfig": "3.0.1",
-		"typescript": "^5.1.6"
+		"typescript": "^5.3.3",
+		"unbuild": "^2.0.0"
 	},
 	"dependencies": {
 		"os-browserify": "0.3.0",
-		"path": "0.12.7"
-	},
-	"publishConfig": {
-		"directory": "dist"
+		"pathe": "1.1.2"
 	}
 }

@@ -1,4 +1,4 @@
-import path from "path";
+import path from "pathe";
 import os from "os";
 
 export function dirname() {
